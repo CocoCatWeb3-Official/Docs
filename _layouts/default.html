@@ -30,10 +30,6 @@
 				<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/emblem.svg" width="40" height="40" alt="{{ site.title }} logo"></a>
 				{{ site.title }}
 				<button type="button" class="open-nav" id="open-nav"></button>
-				<nav>
-					<a href="{{ site.baseurl }}/en/">English</a>
-					<a href="{{ site.baseurl }}/zh/">中文</a>
-				</nav>
 			</h1>
 
 			<form action="{{ site.baseurl }}/search/" method="get">
@@ -64,20 +60,31 @@
 					{% endfor %}
 				</ul>
 
+<!--				<ul>-->
+<!--					<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">-->
+<!--						{% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}-->
+<!--						<a href="{{ site.baseurl }}/changelog/">{{ changelog.title }}</a>-->
+<!--					</li>-->
+<!--				</ul>-->
+
 				<ul>
-					<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
-						{% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}
-						<a href="{{ site.baseurl }}/changelog/">{{ changelog.title }}</a>
+					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
+						{% assign home = site.html_pages | where: 'url', '/' | first %}
+						<a href="{{ site.baseurl }}/">English</a>
+					</li>
+					<li class="nav-item top-level {% if page.url == '/china/' %}current{% endif %}">
+						{% assign home = site.html_pages | where: 'url', '/' | first %}
+						<a href="{{ site.baseurl }}/china">中文</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 
 		<section class="main">
-			<div class="page-header">
-				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
-				<h3>{{ page.title }}</h3>
-			</div>
+<!--			<div class="page-header">-->
+<!--				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>-->
+<!--				<h3>{{ page.title }}</h3>-->
+<!--			</div>-->
 			<article class="content">
 				{{ content }}
 			</article>
