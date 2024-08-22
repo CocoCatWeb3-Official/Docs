@@ -1,0 +1,191 @@
+.active {
+  display: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.total {
+  background: rgb(248, 248, 248);
+}
+.container {
+  width: 1200px;
+  margin: auto;
+  color: #333;
+}
+.item-box {
+  flex: 1;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px 0px rgba(199, 199, 199, 0.6);
+  padding: 33px;
+}
+.box-col {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 28px;
+}
+.section1 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 717px;
+  background: url(/img/homepage/section1_back.png) no-repeat center center;
+  background-size: 100% auto;
+}
+.section1 .title {
+  font-weight: 700;
+  font-size: 64px;
+  color: #000;
+}
+.section1 .msg1 {
+  max-width: 796px;
+  line-height: 1.5;
+}
+.section1 .msg {
+  font-size: 24px;
+  max-width: 575px;
+  margin-top: 52px;
+}
+.section2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section2 .item-box {
+  padding: 0;
+  background: #fff;
+}
+.section2 .item-box:last-child {
+  margin-left: 5%;
+}
+.section2 .fir {
+  padding: 30px;
+}
+.section2 .fir .p-top {
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.section2 .fir .p-top .txt-box {
+  margin-left: 18px;
+}
+.section2 .fir .p-top .img-box {
+  width: 30px;
+  height: 30px;
+}
+.section2 .fir .p-bottom {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.section2 .sec {
+  cursor: pointer;
+  padding: 0px 30px;
+}
+.section2 .sec .sec-container {
+  border-top: 1px solid #d8d8d8;
+  padding: 20px 0px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* 显示的行数 */
+  overflow: hidden;
+}
+.section2 .sec .icon-item {
+  width: 20px;
+  height: 20px;
+}
+.section2 .sec .p-top {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #439bf4;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section2 .sec:hover {
+  background: #f6f6f6;
+}
+.section2 .sec:hover .sec-container {
+  border-top: 1px solid #f6f6f6;
+}
+.section2 .sec:hover .p-top {
+  color: #0068e6;
+}
+.section4 .thir {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.section3 .sec {
+  font-weight: 700;
+}
+.section3 .item-box,
+.section4 .item-box {
+  background: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+  border: 1px solid #c7c7c7;
+}
+
+.section3 .item-box:hover,
+.section4 .item-box:hover {
+  border: 1px solid #0068e6;
+}
+.section3 .item-box:hover .sec,
+.section4 .item-box:hover .sec,
+.section3 .item-box:hover .for,
+.section4 .item-box:hover .for {
+  color: #0068e6;
+}
+.section3 .item-box:hover .origin,
+.section4 .item-box:hover .origin {
+  display: none;
+}
+.section3 .item-box:hover .active,
+.section4 .item-box:hover .active {
+  display: block;
+}
+.section3 .for,
+.section4 .for {
+  display: flex;
+  font-weight: 700;
+}
+.section3 .for .icon-box,
+.section4 .for .icon-box {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.section3 .fir,
+.section4 .fir {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.section3 .item-box:not(:first-child),
+.section4 .item-box:not(:first-child) {
+  margin-left: 1%;
+}
+.section {
+  padding: 50px 0;
+  border-top: 1px solid #d8d8d8;
+}
+.section .title {
+  font-weight: 700;
+  font-size: 24px;
+}
+.section .msg {
+  font-size: 18px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 98%;
+  }
+}
