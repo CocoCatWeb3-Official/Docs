@@ -31,7 +31,7 @@ function HomePage() {
           </div>
           <div className="sec">
             <div className="sec-container">
-              <Link href="" className="p-top" >
+              <Link href="/docs/CocoApp/APIs&SDKs" className="p-top" >
                 <div className="txt-item">CocoApp Development guide</div>
                 <div className="icon-item">
                   <img src="/img/homepage/arrow.png" alt="" />
