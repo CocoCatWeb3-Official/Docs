@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Using CocoApp
+# Add Friends
 
 After successfully downloading CocoApp
 

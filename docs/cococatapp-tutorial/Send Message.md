@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# Send message
+# Send Message
 
 Includes  emojis, voice, pictures, and videos
 
