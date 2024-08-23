@@ -1,10 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # APIs & SDKs
 
-### intro
+### Intro
 
 CocoAPP API is a set of interfaces designed to facilitate communication between third-party applications (i.e., CocoAPP) and the CocoCat platform. This API supports various functions from basic data exchange to executing complex operations. Depending on the functionality, the API interfaces are categorized into different levels, and access to each level requires the corresponding official authorization.
 
