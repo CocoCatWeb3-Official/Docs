@@ -1,12 +1,12 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 # Install CocoPay
 
 Same as other dapps
 
-1. Open CocoCatApp, click on the Coco app, and enter the address of CocoPay in the input box. For more addresses.  
+1. Open CocoCatApp, click on the Coco app, and enter the address of CocoPay in the input box. 
 
 
 

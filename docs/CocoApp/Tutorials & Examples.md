@@ -1,10 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Deployed and Upgrade
-
-# CocoApp Development Guide
+# Tutorials & Examples
 
 CocoApp supports front-end technology stacks such as HTML5, Vue, and React, allowing you to interact with CocoCat using familiar methods. To accelerate the development process, we provide a Vue3 template to help you quickly build, develop, and maintain CocoApp.
 
@@ -47,7 +45,7 @@ Before starting, make sure your development environment is ready：
 
   When the command is executed correctly and completed, the console will output: *CocoApp created successfully*, indicating that the CocoApp identity has been successfully created.
 
-### Development and Testing
+### Run & Test
 
 - **Start the Local Server**: Use the following command to start the local development server and access your CocoApp in the CocoCat debugging tool:
 
@@ -73,22 +71,22 @@ Before starting, make sure your development environment is ready：
 
 ### Project Structure
 
-This project is built using the Vue-cli tool, with a structure similar to standard Vue-cli projects. It includes an additional cocoapp_setup folder specifically for the CocoApp release process.
+This project is built using the Vue-cli tool, with a structure similar to standard Vue-cli projects. It includes an additional *cocoapp_setup* folder specifically for the CocoApp release process.
 
 ### Development Focus
 
 #### CocoCat Communication
 
-The message_utils.ts file in the project serves as a communication bridge between the CocoApp and CocoCat, facilitating interaction between the two. This utility is located in the *src/utils* directory. For detailed API usage, refer to the "CocoApp API Documentation."
+The *message_utils.ts* file in the project serves as a communication bridge between the CocoApp and CocoCat, facilitating interaction between the two. This utility is located in the *src/utils* directory. For detailed API usage, refer to the "CocoApp API Documentation."
 
 #### Application Icon Settings
 
 - Each CocoApp should have a unique icon, recommended to be 192x192 pixels, and stored in the *public/* directory.
-- When packaging the project, the icon.png should be correctly placed in the root of the *dist/* directory to ensure proper display of the application icon.
+- When packaging the project, the *icon.png* should be correctly placed in the root of the *dist/* directory to ensure proper display of the application icon.
 
 #### Application Load Method
 
-CocoApp needs to implement an onload method as part of the CocoAPI to ensure the application interacts with CocoCat as expected. For specific implementation details, please refer to the "CocoApp API Documentation."
+CocoApp needs to implement an *onload* method as part of the CocoAPI to ensure the application interacts with CocoCat as expected. For specific implementation details, please refer to the "CocoApp API Documentation."
 
 ### Packaging Guide
 
@@ -120,13 +118,13 @@ After packaging is complete, the *dist/* directory will contain the following fi
    npm run create <CocoAPPTypeCode> # or use yarn run create <CocoAPPTypeCode>
    ```
 
-   Where CocoAPPTypeCode is the corresponding value chosen based on the functionality of the CocoAPP. For example, for a book-related application, use 0001:
+   Where &lt;CocoAPPTypeCode&gt; is the corresponding value chosen based on the functionality of the CocoAPP. For example, for a book-related application, use *0001*:
 
    ```bash
    npm run create 0001
    ```
 
-   The parameter 0001 represents the type of the CocoAPP. Choose the appropriate type code for your application from the detailed type list below:
+   The parameter *0001* represents the type of the CocoAPP. Choose the appropriate type code for your application from the detailed type list below:
 
    | Type          | Code   |
    | Books         | 0001   |
@@ -152,7 +150,7 @@ After packaging is complete, the *dist/* directory will contain the following fi
    | Weather       | 0021   |
    | Other         | 0022   |
 
-   After the successful execution, the cocoapp_setup folder will have the following structure:
+   After the successful execution, the *cocoapp_setup* folder will have the following structure:
 
       ```css
    cocoapp_setup/
@@ -165,13 +163,13 @@ After packaging is complete, the *dist/* directory will contain the following fi
               └─ content.json
       ```
 
-2. **onfiguration of account.json and Description of the data Folder**:
+2. **onfiguration of *account.json* and Description of the *data* Folder**:
 
-+ **account.json**: This file contains the signing account information, including the privateKey (BTC's WIF format private key) and the address (BTC address generated from the privateKey). If you choose to manually create and configure this file, running init again will create a folder in the *data* directory for the corresponding address and generate a content.json file. During initialization, the correctness of the privateKey and address will also be verified.
++ **account.json**: This file contains the signing account information, including the *privateKey* (BTC's WIF format private key) and the *address* (BTC address generated from the *privateKey*). If you choose to manually create and configure this file, running *init* again will create a folder in the *data* directory for the corresponding *address* and generate a *content.json* file. During initialization, the correctness of the *privateKey* and *address* will also be verified.
 
-+ **data**: This is the main folder where CocoAPP content is stored. Subdirectories are named after the address, and these directories include all files migrated from the *dist* directory, as well as the newly created content.json file.
++ **data**: This is the main folder where CocoAPP content is stored. Subdirectories are named after the *address*, and these directories include all files migrated from the *dist* directory, as well as the newly created *content.json* file.
 
-**Important Note**: The privateKey is highly sensitive information. Be sure to store it securely to avoid losing control over the CocoAPP.
+**Important Note**: The *privateKey* is highly sensitive information. Be sure to store it securely to avoid losing control over the CocoAPP.
 
 #### Signing Steps
 
@@ -181,12 +179,12 @@ After completing identity creation, execute the following command to sign:
 npm run sign # or use yarn run sign
 ```
 
-After successful execution, the console will display: *CocoApp successfully signed*, indicating the signing process is complete. At this point, a new publishfiles.json file will be generated in the *cocoapp_setup/data/&lt;address&gt;* directory, containing all the necessary information and ready for publishing.
+After successful execution, the console will display: *CocoApp successfully signed*, indicating the signing process is complete. At this point, a new *publishfiles.json* file will be generated in the *cocoapp_setup/data/&lt;address&gt;* directory, containing all the necessary information and ready for publishing.
 
 **Important Note**:
 
 - Currently, the digital signing feature is only supported in the Windows environment. We plan to extend support to other operating systems in future versions.
-- Please ensure the total size of all files in the &lt;address&gt; directory does not exceed the 15MB limit. This measure is to ensure the smooth release of CocoApp and the effectiveness of its hot update feature. Exceeding this limit may affect the application publishing process and user experience.
+- Please ensure the total size of all files in the *&lt;address&gt;* directory does not exceed the 15MB limit. This measure is to ensure the smooth release of CocoApp and the effectiveness of its hot update feature. Exceeding this limit may affect the application publishing process and user experience.
 
 #### Preparation for Publishing and Updating
 
@@ -203,11 +201,11 @@ cocoapp_setup/
            └─ index.html
 ```
 
-Package the files in the &lt;address&gt; directory into a .zip file, named &lt;address&gt;.zip, and then prepare for publishing.
+Package the files in the *&lt;address&gt;* directory into a *.zip* file, named *&lt;address&gt;.zip*, and then prepare for publishing.
 
 #### Publishing and Updating Operations
 
-**Publishing**: Contact official customer service through Developer Mode in CocoAPP settings and submit the .zip package to complete the publishing.
+**Publishing**: Contact official customer service through Developer Mode in CocoAPP settings and submit the *.zip* package to complete the publishing.
 
 **Updating**: The update process is the same as the publishing process.
 

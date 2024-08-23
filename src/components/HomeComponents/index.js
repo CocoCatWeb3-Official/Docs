@@ -31,7 +31,7 @@ function HomePage() {
           </div>
           <div className="sec">
             <div className="sec-container">
-              <Link href="/docs/CocoApp/Deployed-and-Upgrade" className="p-top" >
+              <Link href="" className="p-top" >
                 <div className="txt-item">CocoApp Development guide</div>
                 <div className="icon-item">
                   <img src="/img/homepage/arrow.png" alt="" />
@@ -45,7 +45,7 @@ function HomePage() {
           </div>
           <div className="sec">
             <div className="sec-container">
-              <Link href="/docs/CocoApp/SDK-Reference" className="p-top">
+              <Link href="" className="p-top">
                 <div className="txt-item">CocoAPP API</div>
                 <div className="icon-item">
                   <img src="/img/homepage/arrow.png" alt="" />
@@ -60,7 +60,7 @@ function HomePage() {
           </div>
           <div className="sec">
             <div className="sec-container">
-              <Link href='/docs/Self-Service/Deploy' className="p-top">
+              <Link href='' className="p-top">
                 <div className="txt-item">Self Service</div>
                 <div className="icon-item">
                   <img src="/img/homepage/arrow.png" alt="" />

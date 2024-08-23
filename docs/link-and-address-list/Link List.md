@@ -10,7 +10,7 @@ Connect US   APP  Download
 
 | Name     | Link                          |
 | -------- | ----------------------------- |
-| Web      | https://www.cococat.io/       |
+| Web      | https://home.cococat.io/       |
 | Twitter  | https://x.com/CocoCat_Web3    |
 | Telegram | https://t.me/CocoCatCommunity |
 

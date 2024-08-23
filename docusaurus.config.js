@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'The CocoCat Knowledge Layer',
+  title: 'The CocoCat Knowledge Base',
   tagline: '',
   favicon: 'img/docusaurus.png',
 
@@ -16,7 +16,7 @@ const config = {
   url: 'https://cococatweb3-official.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -49,11 +49,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          routeBasePath: '/', // 将 docs 设置为根路径
+          sidebarPath: require.resolve('./sidebars.js')
         },
         // blog: {
         //   showReadingTime: true,
@@ -76,7 +73,7 @@ const config = {
       // customCss: require.resolve('./src/css/custom.css'),
       image: 'img/bg.jpg',
       navbar: {
-        title: 'CocoCat Knowledge Layer',
+        title: 'CocoCat Knowledge Base',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',

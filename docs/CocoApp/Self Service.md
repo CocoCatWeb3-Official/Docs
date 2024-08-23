@@ -1,10 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Deploy
-
-# CocoCat Self-Service Deployment Guide
+# Self Service
 
 This document primarily provides a self-service deployment guide for CocoCat, aiming to ensure the successful deployment and operation of self-service, and to provide the development team with an efficient and stable service infrastructure. It includes detailed installation and configuration of the main service, MongoDB, and Redis, as well as guidance on developing the CocoApp self-service project.
 
@@ -110,13 +108,13 @@ This document primarily provides a self-service deployment guide for CocoCat, ai
 
 6. **Start self-service**
 
-   After configuring config.conf, start the self-service. For detailed configuration, see [Configuration Parameters].(#Configuration Parameters).
+   After configuring *config.conf*, start the self-service. For detailed configuration, see [Configuration Parameters].(#Configuration Parameters).
 
    ```bash
    node cococat.js # It is recommended to run in the background
    ```
 
-   Enter the cococat-route directory, configure pango.conf, and then start the service. For detailed configuration, see [Configuration Parameters] (#Configuration Parameters).
+   Enter the *cococat-route* directory, configure *pango.conf*, and then start the service. For detailed configuration, see [Configuration Parameters] (#Configuration Parameters).
 
    ```bash
    cd cococat-route
@@ -125,7 +123,7 @@ This document primarily provides a self-service deployment guide for CocoCat, ai
    ```
 
 7. **Confirm Successful Startup**
-   Check the startup logs for the message Service connection completed!. Logs can be viewed in the logs directory.
+   Check the startup logs for the message *Service connection completed!*. *Logs* can be viewed in the logs directory.
 
 
 
@@ -196,7 +194,7 @@ This document primarily provides a self-service deployment guide for CocoCat, ai
 
 2. **Configuration Files**
 
-   Mainly configure config.json and pango.conf. For detailed configuration, see [Configuration Parameters] (#Configuration Parameters).
+   Mainly configure *config.json* and *pango.conf*. For detailed configuration, see [Configuration Parameters] (#Configuration Parameters).
 
 3. **Start the Services**
 
@@ -212,19 +210,19 @@ This document primarily provides a self-service deployment guide for CocoCat, ai
 
 5. **Confirm Successful Startup**
 
-- Use docker-compose ps to check the service status:
+- Use *docker-compose ps* to check the service status:
 
   ```bash
   docker-compose ps
   ```
 
-  Look for Service connection completed! in the startup logs, which can be found in the logs directory.
+  Look for *Service connection completed!* in the startup logs, which can be found in the *logs* directory.
 
 
 
 ## Configuration Parameters
 
-CocoCat self-service mainly consists of cococat-web and cococat-route.
+CocoCat self-service mainly consists of *cococat-web* and *cococat-route*.
 
 ### cococat-web
 
@@ -267,32 +265,32 @@ This configuration file includes the following parameters:
 
 ##### Parameter Descriptions
 
-+ **AppTitle**: Name, default is CocoCat-Web.
++ **AppTitle**: Name, default is *CocoCat-Web*.
 + **mongo**:
-    - **host**: MongoDB host address, default is 127.0.0.1.
-    - **port**: MongoDB port number, default is 27017.
+    - **host**: MongoDB host address, default is *127.0.0.1*.
+    - **port**: MongoDB port number, default is *27017*.
     - **username**: MongoDB username.
     - **password**: MongoDB password.
-    - **database**: MongoDB authentication database, default is admin.
+    - **database**: MongoDB authentication database, default is *admin*.
     - **uri**: MongoDB connection URI, if set, it takes precedence.
-    - **dbName**: MongoDB database name, default is cococatdb.
+    - **dbName**: MongoDB database name, default is *cococatdb*.
 + **redis**:
-    - **host**: Redis host address, default is 127.0.0.1.
-    - **port**: Redis port number, default is 6379.
-    - **db**: Redis database index, default is 0.
+    - **host**: Redis host address, default is *127.0.0.1*.
+    - **port**: Redis port number, default is *6379*.
+    - **db**: Redis database index, default is *0*.
     - **password**: Redis password, default is empty.
 + **bodyParser**:
-    - **urlencoded.limit**: Maximum size limit for URL-encoded request bodies, default is 1mb.
-    - **json.limit**: Maximum size limit for JSON request bodies, default is 1mb.
-+ **port**: Port number that cococat-web listens on, default is 4567.
-+ **remoteService**: Backend service address, format is http://\{IP\}:\{port\}, default is [http://127.0.0.1:8080](http://127.0.0.1:8080).
-+ **queue**: Queue component type, default is redis.
+    - **urlencoded.limit**: Maximum size limit for URL-encoded request bodies, default is *1mb*.
+    - **json.limit**: Maximum size limit for JSON request bodies, default is *1mb*.
++ **port**: Port number that *cococat-web* listens on, default is *4567*.
++ **remoteService**: Backend service address, format is *http://\{IP\}:\{port\}*, default is *http://127.0.0.1:8080*.
++ **queue**: Queue component type, default is *redis*.
 
-**Note**: Ensure that the MongoDB and Redis connection information is correct and provide appropriate values for all required parameters to ensure the proper operation of the cococat-web service.
+**Note**: Ensure that the MongoDB and Redis connection information is correct and provide appropriate values for all required parameters to ensure the proper operation of the *cococat-web* service.
 
 ### cococat-route
 
-#### pango.conf
+#### *pango.conf*
 
 This configuration file includes the following parameters：
 
@@ -306,19 +304,19 @@ defaultpeers=ODAuMjUxLjIxNS4yMjg7MTA0LjEyOC45MC4yNzsxMDQuMjI0LjE3Ni4xNTE7ODAuMjU
 
 ##### Parameter Descriptions
 
-+ **localsrvport**：Port number for cococat-route service, default is 4568.
++ **localsrvport**：Port number for *cococat-route* service, default is *4568*.
 + **t2trepeater**：BTC address of the relay service.
-+ **nodserverurl**：URL of the`cococat-web service, default is [http://127.0.0.1:4567](http://127.0.0.1:4567).
++ **nodserverurl**：URL of the *cococat-web* service, default is *http://127.0.0.1:4567*.
 + **defaultpeers**：List of default nodes.
 
 
 ## CocoApp Self-Service Configuration
 
-According to the CocoApp development guide, ensure that the development environment is ready。
+According to the *CocoApp* development guide, ensure that the development environment is ready。
 
 ### Obtain the Service Key for Self-Service
 
-To integrate self-service, you need to obtain a unique service-key。This can be achieved by calling the getServiceKey interface。Use the following command to get the service-key from the local server：
+To integrate self-service, you need to obtain a unique *service-key*。This can be achieved by calling the *getServiceKey* interface。Use the following command to get the *service-key* from the local server：
 
 ```bash
 curl http://127.0.0.1:4567/getServiceKey
@@ -335,10 +333,10 @@ curl http://127.0.0.1:4567/getServiceKey
 
 ### Use the Service Key
 
-After successfully obtaining the service-key, use it in the registerService method of CocoApp to register the self-service functionality。This is a key step in integrating self-service with CocoApp。
+After successfully obtaining the *service-key*, use it in the *registerService* method of *CocoApp* to register the self-service functionality。This is a key step in integrating self-service with *CocoApp*。
 
 ### Develop Self-Service Functionality
 
-After obtaining the service-key and completing the registration, you can start implementing the self-service communication functionality, enabling the self-service to interact with other services for data exchange and message transmission.
+After obtaining the *service-key* and completing the registration, you can start implementing the self-service communication functionality, enabling the self-service to interact with other services for data exchange and message transmission.
 
 Ensure to configure and call the relevant APIs correctly according to the development documentation to ensure stable operation and a good user experience of the service.

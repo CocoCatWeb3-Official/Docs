@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Create a community
+# Create Group
 
 1. Click + and click Create Group 
 

@@ -1,12 +1,12 @@
 ---
-sidebar_position: 6
+sidebar_position: 1
 ---
 
-# Using CocoCat app
+# Using CocoApp
 
-After successfully downloading CocoCat app
+After successfully downloading CocoApp
 
-1.Open CocoCat app
+1.Open CocoApp
 
 
 

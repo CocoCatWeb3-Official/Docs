@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Download and Install the CocoCat App
+# Download & Install
 
 Visit the CocoCat website using a browser and click[ here](https://www.cococat.io/) to navigate
 
@@ -14,12 +14,11 @@ Visit the CocoCat website using a browser and click[ here](https://www.cococat.i
 
 
 
-2.Click Google Play (ensure you are logged into your Google account for this step). 
+2.Click Google Play (ensure you are logged into your Google account for this step).
 
 
 
 Depending on your device, you can choose Google Play, App Store, or directly download the APK file for Android users.
-
 
 
 ![img](img/Download-and-Install-2.png)

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Export wallet private key
+# Export Wallet Private Key
 
 Same as keystore
 
