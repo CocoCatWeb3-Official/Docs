@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Download & Install
 
-Visit the CocoCat website using a browser and click[ here](https://www.cococat.io/) to navigate
+Visit the CocoCat website using a browser and click[ here](https://home.cococat.io/) to navigate
 
 1. Click Download
 
